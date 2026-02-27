@@ -4,6 +4,7 @@ import connectDB from "./database/db.js"
 import userRoute from "./routes/userRoute.js"
 import authRoute from "./routes/authRoute.js"
 import cors from 'cors'
+import passport from "passport" 
 import "./config/passport.js"
 
 const app = express()
@@ -15,6 +16,7 @@ app.use(cors({
     origin:'https://authentication-azure-one.vercel.app',
     credentials:true
 }))
+app.use(passport.initialize())
 
 app.use('/auth', authRoute)
 app.use('/user', userRoute)
