@@ -132,7 +132,7 @@ const Login = () => {
                                         ) : "Login"
                                     }
                                 </Button>
-                                <Button onClick={()=>window.open("http://localhost:8000/auth/google", "_self")} className='w-full' variant='outline'>
+                                <Button onClick={()=>window.open(`${import.meta.env.VITE_API_URL}/auth/google`, "_self")} className='w-full' variant='outline'>
                                     <img src={Google} alt="" className='w-5'/>
                                     Login with Google
                                     </Button>
